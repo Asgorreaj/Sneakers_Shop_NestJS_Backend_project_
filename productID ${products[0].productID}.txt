@@ -1,0 +1,11 @@
+ productID: ${products[0].productID}
+        sellerID:${products[0].sellerID}
+        productName:${products[0].productName}
+        price:${products[0].price}
+        description:${products[0].description}
+        category:${products[0].category}
+        tags:${products[0].tags}
+        availabilty:${products[0].availabilty}
+        ratings:${products[0].ratings} 
+        reviews:${products[0].reviews}
+        picture:${products[0].picture}
