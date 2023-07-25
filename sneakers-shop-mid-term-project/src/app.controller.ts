@@ -49,6 +49,6 @@ export class AppController {
        session.memberID = memberDetails.memberID;
        session.email = memberDetails.email;
        session.profilePicture = memberDetails.profilePicture;
-       return "Login successfull";
+       return "Login successful";
     }
 }

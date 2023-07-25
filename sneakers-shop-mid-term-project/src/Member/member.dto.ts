@@ -52,6 +52,8 @@ export class EditMemberDTO {
 }
 
 export class UserDTO {
+    @IsNotEmpty({ message: "😓 Email should not be empty 😓" })
+    @IsEmail()
     email: string;
     password: string;
 }

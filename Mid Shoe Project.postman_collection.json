@@ -1,0 +1,796 @@
+{
+	"info": {
+		"_postman_id": "a8292375-c4a2-4166-81c8-5bae7e54ad8a",
+		"name": "Mid Shoe Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27863014"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "MD.ASGORHOSSAIN",
+							"type": "default"
+						},
+						{
+							"key": "lastName",
+							"value": "REAJ",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "Prohor",
+							"type": "default"
+						},
+						{
+							"key": "dateOfBirth",
+							"value": "1999/7/7",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Dhaka,Bangladesh",
+							"type": "default"
+						},
+						{
+							"key": "telephoneNumber",
+							"value": "01609711518",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "asgorreaj@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "rootroot",
+							"type": "default"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "rootroot",
+							"type": "default"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": "/E:/10semester/advance web tech/advance web tech mid project done/Advanced-Programming-In-Web-Technology-Project-main/sneakers-shop-mid-term-project/pictures/profile_pictures/1689626320683ajgor.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registration"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/login?email=asgorreaj@gmail.com&password=rootroot",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "asgorreaj@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "rootroot"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show profile detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/showprofiledetails",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"showprofiledetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showprofilepicture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/showprofilepicture",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"showprofilepicture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit profile Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "editKey",
+							"value": "firstName",
+							"type": "text"
+						},
+						{
+							"key": "editValue",
+							"type": "file",
+							"src": "/D:/Advanced-Programming-In-Web-Technology-Project-main/nature-nurtures-mid-term-project/pictures/profile_pictures/ajgor.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/editprofiledetails?editKey=username&editValue=prohor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"editprofiledetails"
+					],
+					"query": [
+						{
+							"key": "editKey",
+							"value": "username"
+						},
+						{
+							"key": "editValue",
+							"value": "prohor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shop",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "MDASGOR",
+							"type": "default"
+						},
+						{
+							"key": "lastName",
+							"value": "hHOSSAIN",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "reaj",
+							"type": "default"
+						},
+						{
+							"key": "dateOfBirth",
+							"value": "1999/5/5",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Dhaka",
+							"type": "default"
+						},
+						{
+							"key": "telephoneNumber",
+							"value": "01609711518",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "asgorreaj@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "rootroot",
+							"type": "default"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "rootroot",
+							"type": "default"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": "/D:/Advanced-Programming-In-Web-Technology-Project-main/nature-nurtures-mid-term-project/pictures/profile_pictures/1689449744549356386119_10162917835828574_6406821263289274169_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/shop",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "booked",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/cart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/addtocart?productID=3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"addtocart"
+					],
+					"query": [
+						{
+							"key": "productID",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/searchorder/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"searchorder",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/cancelorder/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"cancelorder",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirm order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "orderID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "3500",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "BDT",
+							"type": "text"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "BKASH",
+							"type": "text"
+						},
+						{
+							"key": "paymentDate",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/confirmorder?orderID=4&amount=3500&currency=BDT&paymentMethod=BKASH&paymentDate=",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"confirmorder"
+					],
+					"query": [
+						{
+							"key": "orderID",
+							"value": "4"
+						},
+						{
+							"key": "amount",
+							"value": "3500"
+						},
+						{
+							"key": "currency",
+							"value": "BDT"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "BKASH"
+						},
+						{
+							"key": "paymentDate",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/rateproduct?memberID=1&productID=2&rating=4.5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"rateproduct"
+					],
+					"query": [
+						{
+							"key": "memberID",
+							"value": "1"
+						},
+						{
+							"key": "productID",
+							"value": "2"
+						},
+						{
+							"key": "rating",
+							"value": "4.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "memberID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "productID",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "review",
+							"value": "GOOD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/reviewproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"reviewproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register seller (becomeseller)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "shopName",
+							"value": "sneaker_club",
+							"type": "text"
+						},
+						{
+							"key": "shopLocation",
+							"value": "Dhaka",
+							"type": "text"
+						},
+						{
+							"key": "shopPicture",
+							"type": "file",
+							"src": "/E:/10semester/advance web tech/advance web tech mid project done/Advanced-Programming-In-Web-Technology-Project-main/sneakers-shop-mid-term-project/pictures/profile_pictures/1689449744549356386119_10162917835828574_6406821263289274169_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/becomeseller",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"becomeseller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/showsellerdetails",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"showsellerdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller edit details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/member/editsellerdetails?editKey=shopName&editValue=sneakers club",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"editsellerdetails"
+					],
+					"query": [
+						{
+							"key": "editKey",
+							"value": "shopName"
+						},
+						{
+							"key": "editValue",
+							"value": "sneakers club"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "selller add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sellerID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "productName",
+							"value": "Nike",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "3500",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "HighNick Roller",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "fashionShoe",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "stylized",
+							"type": "text"
+						},
+						{
+							"key": "availabilty",
+							"value": "five",
+							"type": "text"
+						},
+						{
+							"key": "supplier",
+							"value": "China",
+							"type": "text"
+						},
+						{
+							"key": "review",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "productPicture",
+							"type": "file",
+							"src": "/E:/10semester/advance web tech/advance web tech mid project done/Advanced-Programming-In-Web-Technology-Project-main/sneakers-shop-mid-term-project/pictures/product_pictures/1689655300667best-nike-high-top-sneakers-shoes-large.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/seller/addproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seller",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productID",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "property",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member/updateproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"updateproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:3000/seller/deleteproduct/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seller",
+						"deleteproduct",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seller report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/seller/saleReport",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seller",
+						"saleReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mail Updated Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/seller/updatefornewproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"seller",
+						"updatefornewproduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

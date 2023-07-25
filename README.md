@@ -36,12 +36,14 @@ In this project the “Customer” has the following features:
 3.	Can upgrade membership.
 4.	Can buy products.
 5.	Can review a product.
-6.	Can get information about different types of plants.
-7.	Can get guidelines on planting trees.
+6.	Can get information about different types of Shoes.
+7.	Can get guidelines on shoe.
 8.	Can cancel the order.
 9.	Can apply for a refund from the seller.
 10.	Can share emotion through newsfeed.
-11.	Can interact with others posts.
+11.	Can see owner picture.
+12.	Can Edit members details.
+
 
 
 In this project the “Seller” has the following features:

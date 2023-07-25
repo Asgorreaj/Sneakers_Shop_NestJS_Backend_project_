@@ -16,7 +16,8 @@ export class AppService {
         const salt = await bcrypt.genSalt();
         member.password = await bcrypt.hash(member.password, salt);
         return await this.memberRepository.save(member);
-    }
+    };
+    
 
     // Log in
     async login(query:UserDTO)

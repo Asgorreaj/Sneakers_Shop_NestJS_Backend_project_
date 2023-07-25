@@ -4,16 +4,16 @@ import { ProductEntity } from "src/Seller/product.entity";
 
 @Entity('review')
 export class ReviewEntity {
-    @PrimaryGeneratedColumn( { name: 'review_id' } )
+    @PrimaryGeneratedColumn({ name: 'review_id' })
     reviewID: number;
 
-    @Column( { name: 'member_id' } )
+    @Column({ name: 'member_id' })
     memberID: number;
 
-    @Column( { name: 'product_id' } )
+    @Column({ name: 'product_id' })
     productID: number;
 
-    @Column( { name: 'rating', type: 'varchar'} )
+    @Column({ name: 'review', type: 'varchar' })
     review: string;
 
     @OneToOne(() => MemberEntity, member => member.review)

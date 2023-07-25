@@ -11,12 +11,12 @@ import { MailerModule } from '@nestjs-modules/mailer';
   imports: [
     MemberModule,
     SellerModule,
-      TypeOrmModule.forRoot({
+    TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'postgres',
+      password: 'root',
       database: 'sneakers_club', //Change to your database name
       autoLoadEntities: true,
       synchronize: true,
@@ -29,7 +29,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
         ignoreTLS: true,
         secure: true,
         auth: {
-          user:'asgorreaj@gmail.com',
+          user: 'asgorreaj@gmail.com',
           pass: 'dpydxzwggthspucb'
         },
       },
@@ -38,4 +38,4 @@ import { MailerModule } from '@nestjs-modules/mailer';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

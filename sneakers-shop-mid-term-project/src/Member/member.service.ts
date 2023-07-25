@@ -5,7 +5,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { MemberEntity } from "./member.entity";
 import { Repository } from "typeorm";
 import { OrderEntity } from "./order.entity";
-import { PaymentDTO } from "./payment.dto";
+import { PaymentDTO, confirmOrderDTO } from "./payment.dto";
 import { ProductEntity } from "src/Seller/product.entity";
 import { AddToCartDTO } from "src/Seller/product.dto";
 import { SellerEntity } from "src/Seller/seller.entity";
@@ -122,22 +122,47 @@ export class MemberService{
         }
     }
 
+    // async confirmOrder(query: PaymentDTO) {
+    //     const orderID = query.orderID;
+    //     const order = await this.orderRepository.findOneBy( { orderID: orderID } );
+    //     if (order == null) {
+    //         throw new UnauthorizedException({
+    //             status: HttpStatus.NOT_FOUND,
+    //             message: "Order not found"
+    //         })
+    //     }
+    //     order.orderStatus = "Shipped";
+    //     await this.orderRepository.save(order);
+    //     //await this.orderRepository.save(order);
+    //     query.amount = order.totalAmount;
+    //     query.paymentDate = new Date();
+    //     return this.paymentRepository.save(query);
+    // }
+
     async confirmOrder(query: PaymentDTO) {
         const orderID = query.orderID;
-        const order = await this.orderRepository.findOneBy( { orderID: orderID } );
-        if (order == null) {
-            throw new UnauthorizedException({
-                status: HttpStatus.NOT_FOUND,
-                message: "Order not found"
-            })
+        const order = await this.orderRepository.findOneBy({ orderID: orderID });
+        if (!order) {
+          throw new UnauthorizedException({
+            status: HttpStatus.NOT_FOUND,
+            message: 'Order not found',
+          });
         }
-        order.orderStatus = "Shipped";
+        order.orderStatus = 'Shipped';
         await this.orderRepository.save(order);
-        await this.orderRepository.save(order);
-        query.amount = order.totalAmount;
-        query.paymentDate = new Date();
-        return this.paymentRepository.save(query);
-    }
+    
+        // Create a new PaymentEntity and set its properties
+        const payment = new PaymentEntity();
+        payment.orderID = orderID;
+        payment.amount = order.totalAmount;
+        payment.currency = 'BDT'; // Set the currency value
+        payment.paymentMethod = 'BKASH'; // Set the payment method value
+        payment.paymentDate = new Date();
+    
+        // Save the PaymentEntity with the associated OrderEntity
+        payment.order = order;
+        return this.paymentRepository.save(payment);
+      }
 
     async rateProduct(memberID, query:RatingDTO) {
         query.memberID = memberID;

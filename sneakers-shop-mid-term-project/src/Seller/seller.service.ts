@@ -73,12 +73,11 @@ export class SellerService {
 
      async updateForNewProduct() {
         const products = await this.productRepository.find();
-        await this.mailerService.sendMail({to: 'sagorshafi@gmail.com',
-        subject: "Update for new shoes",
+        await this.mailerService.sendMail({to: 'ajgorhossainreaj@gmail.com',
+        subject: "A new product has been added! Check it out now",
         text: 
         `        ===========================
-        name: MD ASGOR HOSSAIN REAJ
-        ID- 20-43999-2
+
         productID: ${products[0].productID}
         sellerID:${products[0].sellerID}
         productName:${products[0].productName}
