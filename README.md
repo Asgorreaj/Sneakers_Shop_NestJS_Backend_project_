@@ -75,3 +75,4 @@ In this project the “Manager” has the following features:
 10.	Can cancel membership.
 11.	Can add products on wish list. 
 "# sneakers_shop" 
+"# sneakers_shop" 
